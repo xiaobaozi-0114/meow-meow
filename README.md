@@ -27,21 +27,29 @@ pnpm build
 
 ## GitHub Pages 部署
 
-项目已内置 GitHub Actions Pages 工作流。推送到仓库 `main` 分支后，GitHub 会自动构建 `dist` 并发布到 Pages。
+项目采用单仓库发布：源码和静态网页都放在 `xiaobaozi-0114/meow-meow`，其中 `docs/` 是 GitHub Pages 直接发布的静态产物。
 
-如果仓库名是 `meow-meow`，发布地址通常是：
+发布地址：
 
 ```text
 https://xiaobaozi-0114.github.io/meow-meow/
 ```
 
-如果仓库名是 `xiaobaozi-0114.github.io`，发布地址通常是：
+仓库设置里需要把 Pages 的 Source 设为：
 
 ```text
-https://xiaobaozi-0114.github.io/
+Deploy from a branch
+Branch: main
+Folder: /docs
 ```
 
-仓库设置里需要把 Pages 的 Source 设为 `GitHub Actions`。
+更新网页时重新构建并同步 `docs/`：
+
+```bash
+pnpm build
+rm -rf docs
+cp -R dist docs
+```
 
 ## AI 问答免费方案
 

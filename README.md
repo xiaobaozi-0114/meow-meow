@@ -57,7 +57,7 @@ Meow Meow is designed as a cat-care reference and decision aid. For emergencies,
 
 If your cat cannot urinate, vomits repeatedly, has obvious breathing difficulty, seizures, suspected poisoning, serious trauma, extreme lethargy, or abnormal body temperature, do not wait for online advice. Seek veterinary care immediately.
 
-## A Tiny Personal Flex
+## A Tiny Personal Flex ✨
 
 <p align="center">
   <a href="https://xhslink.com/m/4OnNjEIQUFM">
@@ -65,4 +65,6 @@ If your cat cannot urinate, vomits repeatedly, has obvious breathing difficulty,
   </a>
 </p>
 
-These are my own cats, and yes, this is the most personal part of Meow Meow. For more daily photos of my cats, visit my [Xiaohongshu profile](https://xhslink.com/m/4OnNjEIQUFM).
+Tiny Easter egg unlocked: these are my own fluffy supervisors, currently off-duty and judging all product recommendations from their tiny beds. 🐾
+
+If you want more cozy cat chaos, sleepy faces, and daily meow moments, come visit my [Xiaohongshu profile](https://xhslink.com/m/4OnNjEIQUFM). 💛

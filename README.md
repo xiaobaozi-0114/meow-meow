@@ -56,3 +56,13 @@
 Meow Meow is designed as a cat-care reference and decision aid. For emergencies, medication, dosage, diagnosis, prescriptions, chronic disease, kittens, pregnant cats, senior cats, or cats with existing health conditions, please consult a veterinarian or animal hospital.
 
 If your cat cannot urinate, vomits repeatedly, has obvious breathing difficulty, seizures, suspected poisoning, serious trauma, extreme lethargy, or abnormal body temperature, do not wait for online advice. Seek veterinary care immediately.
+
+## A Tiny Personal Flex
+
+<p align="center">
+  <a href="https://xhslink.com/m/4OnNjEIQUFM">
+    <img src="./public/images/my-cats.jpg" alt="My cats resting in their cozy beds" />
+  </a>
+</p>
+
+These are my own cats, and yes, this is the most personal part of Meow Meow. For more daily photos of my cats, visit my [Xiaohongshu profile](https://xhslink.com/m/4OnNjEIQUFM).

@@ -8,11 +8,13 @@
 
 <p align="center">
   <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80-Meow%20Meow-0f766e?style=for-the-badge" alt="立即打开 Meow Meow" /></a>
+  <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/promo-slides.html"><img src="https://img.shields.io/badge/%E5%AE%A3%E4%BC%A0-%E5%B9%BB%E7%81%AF%E7%89%87-5b8def?style=for-the-badge" alt="宣传幻灯片" /></a>
   <a href="./README.md"><img src="https://img.shields.io/badge/Language-English-f59e0b?style=for-the-badge" alt="English README" /></a>
 </p>
 
 <p align="center">
-  <strong>网页入口：<a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/">https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/</a></strong>
+  <strong>网页入口：<a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/">https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/</a></strong><br />
+  <strong>宣传幻灯片：<a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/promo-slides.html">https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/promo-slides.html</a></strong>
 </p>
 
 <p align="center">

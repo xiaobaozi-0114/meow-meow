@@ -1,18 +1,18 @@
-# [Meow Meow](https://xiaobaozi-0114.github.io/meow-meow/)
+# [Meow Meow](https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/)
 
 <p align="center">
-  <a href="https://xiaobaozi-0114.github.io/meow-meow/">
+  <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/">
     <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14B8A6,45:0F766E,100:F59E0B&height=260&section=header&text=Meow%20Meow&fontSize=60&fontColor=ffffff&animation=fadeIn&desc=Your%20all-in-one%20cat%20care%20guide%20%7C%20Click%20to%20open&descSize=18&descAlignY=62" alt="Meow Meow - Your all-in-one cat care guide" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://xiaobaozi-0114.github.io/meow-meow/"><img src="https://img.shields.io/badge/Open-Meow%20Meow-0f766e?style=for-the-badge" alt="Open Meow Meow" /></a>
+  <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/"><img src="https://img.shields.io/badge/Open-Meow%20Meow-0f766e?style=for-the-badge" alt="Open Meow Meow" /></a>
   <a href="./README_ZH.md"><img src="https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-f59e0b?style=for-the-badge" alt="Chinese README" /></a>
 </p>
 
 <p align="center">
-  <strong>Website: <a href="https://xiaobaozi-0114.github.io/meow-meow/">https://xiaobaozi-0114.github.io/meow-meow/</a></strong>
+  <strong>Website: <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/">https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/</a></strong>
 </p>
 
 <p align="center">

@@ -1,18 +1,18 @@
-# [Meow Meow](https://xiaobaozi-0114.github.io/meow-meow/)
+# [Meow Meow](https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/)
 
 <p align="center">
-  <a href="https://xiaobaozi-0114.github.io/meow-meow/">
+  <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/">
     <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14B8A6,45:0F766E,100:F59E0B&height=260&section=header&text=Meow%20Meow&fontSize=60&fontColor=ffffff&animation=fadeIn&desc=%E4%B8%80%E7%AB%99%E5%BC%8F%E5%85%BB%E7%8C%AB%E7%99%BE%E7%A7%91%20%7C%20%E7%82%B9%E5%87%BB%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80&descSize=18&descAlignY=62" alt="Meow Meow - 一站式养猫百科" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://xiaobaozi-0114.github.io/meow-meow/"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80-Meow%20Meow-0f766e?style=for-the-badge" alt="立即打开 Meow Meow" /></a>
+  <a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/"><img src="https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80-Meow%20Meow-0f766e?style=for-the-badge" alt="立即打开 Meow Meow" /></a>
   <a href="./README.md"><img src="https://img.shields.io/badge/Language-English-f59e0b?style=for-the-badge" alt="English README" /></a>
 </p>
 
 <p align="center">
-  <strong>网页入口：<a href="https://xiaobaozi-0114.github.io/meow-meow/">https://xiaobaozi-0114.github.io/meow-meow/</a></strong>
+  <strong>网页入口：<a href="https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/">https://xiaobaozi-0114.github.io/meow-meow-is-all-you-need/</a></strong>
 </p>
 
 <p align="center">

@@ -59,7 +59,12 @@ const productTabs: ProductCategory[] = ['猫粮', '猫罐头', '猫条', '猫咪
 const chinaCommonBreedIds = ['bsho', 'asho', 'ragd', 'lihu', 'siam', 'pers', 'mcoo', 'sfol', 'munc', 'esho']
 const breedGallerySize = 10
 const chatApiUrl = import.meta.env.VITE_CHAT_API_URL || '/api/chat'
-const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+const githubPagesBasename = '/meow-meow-is-all-you-need'
+const buildBasename = import.meta.env.BASE_URL.replace(/\/$/, '')
+const routerBasename =
+  typeof window !== 'undefined' && window.location.pathname.startsWith(githubPagesBasename)
+    ? githubPagesBasename
+    : buildBasename || '/'
 
 const chinaCommonBreedRank = (id: string) => {
   const index = chinaCommonBreedIds.indexOf(id)
@@ -81,6 +86,7 @@ function App() {
             <Route path="/rankings" element={<RankingsPage />} />
             <Route path="/emergency" element={<EmergencyPage />} />
             <Route path="/ask" element={<ChatPage />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
         <Footer />

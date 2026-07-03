@@ -613,12 +613,32 @@ function ChatPage() {
 }
 
 function EmergencyPage() {
+  const [query, setQuery] = useState('')
+  const normalizedQuery = query.trim().toLowerCase()
+  const filteredTips = emergencyTips.filter((tip) => {
+    if (!normalizedQuery) return true
+    const text = [
+      tip.disease,
+      tip.category,
+      tip.risk,
+      tip.aliases.join(' '),
+      tip.symptoms.join(' '),
+      tip.vetAdvice.join(' '),
+      tip.homeCare.join(' '),
+      tip.doNot.join(' '),
+      tip.emergencySigns,
+    ]
+      .join(' ')
+      .toLowerCase()
+    return text.includes(normalizedQuery)
+  })
+
   return (
     <div className="page">
       <PageTitle
         icon={<HeartPulse />}
-        title="猫咪生病自救与急救分诊"
-        desc="只提供识别、临时处理、禁止事项和就医优先级，不替代兽医诊断。"
+        title="猫咪常见疾病查询"
+        desc="按疾病和症状整理可观察信号、就医建议、居家临时处理和危险信号，不替代兽医诊断。"
       />
       <div className="emergency-banner">
         <AlertTriangle size={24} />
@@ -627,16 +647,48 @@ function EmergencyPage() {
           <span>不要在网上等待诊断，也不要自行使用人用药。</span>
         </div>
       </div>
+      <section className="disease-search-panel" aria-label="疾病搜索">
+        <label className="search-box">
+          <Search size={18} />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="搜索疾病或症状：尿闭、软便、猫鼻支、口臭、猫癣..."
+          />
+        </label>
+        <div className="disease-search-meta">
+          <Filter size={16} />
+          当前显示 {filteredTips.length} / {emergencyTips.length} 个病症
+        </div>
+      </section>
       <div className="emergency-grid">
-        {emergencyTips.map((tip) => (
+        {filteredTips.map((tip) => (
           <article className={`emergency-card emergency-risk-${tip.risk}`} key={tip.id}>
             <div className="risk-head">
               <RiskBadge risk={tip.risk} />
-              <h2>{tip.symptom}</h2>
+              <span className="disease-category">{tip.category}</span>
+              <h2>{tip.disease}</h2>
+              <div className="tag-row compact-tags">
+                {tip.aliases.slice(0, 6).map((alias) => (
+                  <span key={alias}>{alias}</span>
+                ))}
+              </div>
             </div>
-            <h3>可以先做</h3>
+            <h3>可观测症状</h3>
             <ul className="check-list">
-              {tip.firstAid.map((item) => (
+              {tip.symptoms.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <h3>就医建议</h3>
+            <ul className="check-list">
+              {tip.vetAdvice.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <h3>居家临时处理</h3>
+            <ul className="check-list">
+              {tip.homeCare.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -646,11 +698,16 @@ function EmergencyPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <p className="go-now">{tip.goNow}</p>
+            <p className="go-now">{tip.emergencySigns}</p>
             <SourceList sources={tip.sources} />
           </article>
         ))}
       </div>
+      {filteredTips.length === 0 ? (
+        <div className="empty-state">
+          没有匹配的病症。可以换一个关键词，例如“尿频”“呕吐”“打喷嚏”“口臭”“猫癣”。
+        </div>
+      ) : null}
     </div>
   )
 }
@@ -1121,12 +1178,12 @@ function collectKnowledge(query: string): KnowledgeHit[] {
   })
 
   emergencyTips.forEach((tip) => {
-    const text = `${tip.symptom} ${tip.risk} ${tip.firstAid.join(' ')} ${tip.doNot.join(' ')} ${tip.goNow}`
+    const text = `${tip.disease} ${tip.category} ${tip.risk} ${tip.aliases.join(' ')} ${tip.symptoms.join(' ')} ${tip.vetAdvice.join(' ')} ${tip.homeCare.join(' ')} ${tip.doNot.join(' ')} ${tip.emergencySigns}`
     if (matchesQuestion(text, normalized)) {
       hits.push({
         section: '急救',
-        title: tip.symptom,
-        summary: `风险等级：${tip.risk}。可以先做：${tip.firstAid.join(' ')} 禁止：${tip.doNot.join(' ')} ${tip.goNow}`,
+        title: tip.disease,
+        summary: `风险等级：${tip.risk}。可观测症状：${tip.symptoms.join(' ')} 就医建议：${tip.vetAdvice.join(' ')} 居家临时处理：${tip.homeCare.join(' ')} 禁止：${tip.doNot.join(' ')} ${tip.emergencySigns}`,
         to: '/emergency',
       })
     }
@@ -1187,12 +1244,16 @@ function searchSite(query: string) {
     }))
 
   const emergencyResults = emergencyTips
-    .filter((tip) => `${tip.symptom} ${tip.goNow}`.toLowerCase().includes(normalized))
+    .filter((tip) =>
+      `${tip.disease} ${tip.category} ${tip.aliases.join(' ')} ${tip.symptoms.join(' ')} ${tip.emergencySigns}`
+        .toLowerCase()
+        .includes(normalized),
+    )
     .slice(0, 3)
     .map((tip) => ({
       type: '急救',
-      title: tip.symptom,
-      desc: tip.goNow,
+      title: tip.disease,
+      desc: tip.emergencySigns,
       to: '/emergency',
     }))
 
@@ -1200,7 +1261,7 @@ function searchSite(query: string) {
     { type: '', title: '品种大全', desc: '按毛长、地区、体型、性格筛选', to: '/breeds' },
     { type: '', title: '新手教程', desc: '接猫准备、到家适应、喂养护理一步到位', to: '/guide' },
     { type: '', title: '猫咪用品汇总', desc: '猫粮、猫罐头、猫条、保健品、猫砂和日用品等', to: '/rankings' },
-    { type: '', title: '猫咪急症判断', desc: '急救分诊和就医提示', to: '/emergency' },
+    { type: '', title: '猫咪常见疾病查询', desc: '症状搜索、居家临时处理和就医提示', to: '/emergency' },
   ]
 
   if (!normalized) return defaults

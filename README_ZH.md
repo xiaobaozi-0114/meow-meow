@@ -19,6 +19,10 @@
   <a href="./README.md">English</a> | <a href="./README_ZH.md">中文</a>
 </p>
 
+<p align="center">
+  <img src="./public/images/meow-meow-readme-banner.png" alt="Meow Meow 养猫百科功能预览" />
+</p>
+
 > 面向中国养猫家庭的猫咪百科与智能养猫助手。选猫、接猫、喂养、护理、用品参考、异常症状分诊，一站式查清楚。
 
 ## 你可以用它做什么

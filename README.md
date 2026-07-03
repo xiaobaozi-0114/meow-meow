@@ -19,6 +19,10 @@
   <a href="./README.md">English</a> | <a href="./README_ZH.md">中文</a>
 </p>
 
+<p align="center">
+  <img src="./public/images/meow-meow-readme-banner.png" alt="Meow Meow feature preview" />
+</p>
+
 > A Chinese cat-care encyclopedia and smart cat assistant for everyday cat owners. Explore cat breeds, beginner guides, daily care, product references, symptom triage, and practical Q&A in one place.
 
 ## What You Can Do

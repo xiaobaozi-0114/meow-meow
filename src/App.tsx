@@ -59,6 +59,7 @@ const productTabs: ProductCategory[] = ['猫粮', '猫罐头', '猫条', '猫咪
 const chinaCommonBreedIds = ['bsho', 'asho', 'ragd', 'lihu', 'siam', 'pers', 'mcoo', 'sfol', 'munc', 'esho']
 const breedGallerySize = 10
 const chatApiUrl = import.meta.env.VITE_CHAT_API_URL || '/api/chat'
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
 
 const chinaCommonBreedRank = (id: string) => {
   const index = chinaCommonBreedIds.indexOf(id)
@@ -67,7 +68,7 @@ const chinaCommonBreedRank = (id: string) => {
 
 function App() {
   return (
-    <Router>
+    <Router basename={routerBasename}>
       <div className="app-shell">
         <Header />
         <main>
